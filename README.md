@@ -89,8 +89,6 @@ This project is released under the [MIT License](LICENSE). Bundled third-party l
 
 Shared styles, navigation and themes: [oz-coden.com-ui-web](https://github.com/oz-coden/oz-coden.com-ui-web).
 
-The initial implementation was adapted from the [show-random-re tool](https://github.com/oz-coden/oz-coden.github.io/tree/dfc7c0a29396e2114d73e99dd17d494f7ab1c5ee/tools/show-random-re) in oz-coden.github.io. This repository contains the source needed to run and modify the application independently.
-
 The following MIT-licensed libraries are bundled in `vendor/randexp/`:
 
 - randexp 0.5.3 — Copyright (C) 2011 by fent
@@ -189,8 +187,6 @@ This project is released under the [MIT License](LICENSE). Bundled third-party l
 ## クレジット
 
 共通のスタイル・ナビゲーション・テーマ：[oz-coden.com-ui-web](https://github.com/oz-coden/oz-coden.com-ui-web)。
-
-初期実装は、oz-coden.github.ioの[show-random-reツール](https://github.com/oz-coden/oz-coden.github.io/tree/dfc7c0a29396e2114d73e99dd17d494f7ab1c5ee/tools/show-random-re)を元にしています。このリポジトリには、単独でアプリを実行・変更するためのソースを含めています。
 
 `vendor/randexp/`には、次のMITライセンスのライブラリを同梱しています。
 
