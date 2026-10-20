@@ -1,0 +1,11 @@
+.regex-inputs { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+#regex-pattern { flex: 1; font-family: ui-monospace, Consolas, monospace; }
+.flags-label { flex: 0 0 85px; margin: 0 !important; font-size: .75rem !important; }
+#regex-flags { padding: 8px; }
+.result-title { margin-top: 28px !important; }
+.output-box { padding: 16px; border: 1px solid var(--c-border); border-radius: 8px; background: var(--c-bg-main); white-space: pre-wrap; overflow-wrap: anywhere; font: 15px/1.8 ui-monospace, Consolas, monospace; }
+.guide-table { overflow: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .875rem; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--c-border); }
+th { color: var(--c-text-sub); }
+code { font-family: ui-monospace, Consolas, monospace; }
