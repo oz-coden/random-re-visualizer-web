@@ -25,7 +25,7 @@
             <div class="regex-inputs"><span aria-hidden="true">/</span><input type="text" id="regex-pattern" value="^[a-zA-Z0-9]{5,10}$" spellcheck="false" maxlength="2048"><span aria-hidden="true">/</span><label class="flags-label">フラグ<input type="text" id="regex-flags" value="g" spellcheck="false" maxlength="8"></label></div>
             <button id="generate-btn" class="action-btn">一致する候補を生成する</button>
             <h2 class="result-title">生成結果</h2><pre id="output-area" class="output-box" role="status"></pre>
-            <p class="ui-note">候補を5件生成します。後読みなど一部の構文には対応していません。</p>
+            <p class="ui-note">候補を5件生成します。改行・タブはエスケープ表示し、空文字は &quot;&quot; と表示します。後読みなど一部の構文には対応していません。</p>
         </section>
         <section class="ui-panel"><h2>正規表現クイックガイド</h2><div class="guide-table"><table>
                 <tr>
@@ -35,7 +35,7 @@
                 </tr>
                 <tr>
                     <td><code>.</code></td>
-                    <td>任意の1文字</td>
+                    <td>改行以外の1文字（sフラグで改行も含む）</td>
                     <td><code>a.c</code> (abc, a1c)</td>
                 </tr>
                 <tr>
@@ -65,7 +65,7 @@
                 </tr>
                 <tr>
                     <td><code>^</code> / <code>$</code></td>
-                    <td>行の先頭 / 行の末尾</td>
+                    <td>入力の先頭 / 末尾（mフラグで行の境界も含む）</td>
                     <td><code>^abc$</code> (完全一致)</td>
                 </tr>
                 <tr>

@@ -37,7 +37,7 @@ The aim is to help explore regular expressions by viewing concrete examples of m
 
 ## Requirements, Dependencies
 
-- A current web browser with JavaScript and Web Workers enabled.
+- The latest stable version of a web browser with JavaScript enabled.
 - Serve the application over HTTP or HTTPS. Opening `index.html` directly as a `file://` URL can prevent the worker from loading.
 
 The user interface is in Japanese. Shared UI assets are included in this repository. Python 3 is only needed for the example local server command below; an equivalent static HTTP server can also be used.
@@ -61,7 +61,7 @@ Pattern processing and sample generation run entirely in the browser. The applic
 
 1. Enter a regular expression in **正規表現パターン**, without surrounding `/` delimiters. For example: `^[A-Z]{3}-[0-9]{4}$`.
 2. Enter JavaScript regular expression flags, such as `i`, in **フラグ** if needed. Leave the field empty when no flags are required.
-3. Click **一致する候補を生成する** and read the five strings under **生成結果**. Click again to generate another set.
+3. Click **一致する候補を生成する** and read the five strings under **生成結果**. Click again to generate another set. Each result is shown as a JSON string literal, with quotes and escapes so that empty strings, newlines and tabs are visible.
 
 Generation is limited by the syntax supported by randexp.js and its parser. Some JavaScript constructs, including lookbehind, are unsupported. A syntactically valid expression may still fail to produce a matching candidate. Unbounded repetitions are bounded during generation, and the results do not enumerate all possible matches.
 
@@ -136,7 +136,7 @@ Full license notices are in [THIRD-PARTY-NOTICES.txt](vendor/randexp/THIRD-PARTY
 
 ## 前提・依存
 
-- JavaScriptとWeb Workerが有効な最新のWebブラウザ。
+- JavaScriptが有効な最新版（安定版）のWebブラウザ。
 - HTTPまたはHTTPSでの配信。`index.html`を`file://`で直接開くと、Workerを読み込めない場合があります。
 
 画面の言語は日本語です。共通UIのファイルはこのリポジトリに同梱しています。Python 3は下記のローカルサーバーのコマンドを使う場合に必要で、同等の静的HTTPサーバーでも実行できます。
@@ -160,7 +160,7 @@ Full license notices are in [THIRD-PARTY-NOTICES.txt](vendor/randexp/THIRD-PARTY
 
 1. **正規表現パターン**に、前後の`/`を付けずに入力します。例：`^[A-Z]{3}-[0-9]{4}$`。
 2. 必要に応じて**フラグ**に`i`などのJavaScriptの正規表現フラグを指定します。不要な場合は空欄にします。
-3. **一致する候補を生成する**を押し、**生成結果**に表示される5件の文字列を確認します。もう一度押すと再生成します。
+3. **一致する候補を生成する**を押し、**生成結果**に表示される5件の文字列を確認します。もう一度押すと再生成します。結果はJSONの文字列リテラルとして引用符・エスケープ付きで表示するため、空文字列・改行・タブも区別できます。
 
 生成できる構文はrandexp.jsとそのパーサーの対応範囲に限られます。後読みなど、一部のJavaScriptの構文には対応していません。構文上有効な正規表現でも、一致候補を生成できない場合があります。上限のない繰り返しも生成時には範囲を制限し、すべての一致候補を列挙するものではありません。
 

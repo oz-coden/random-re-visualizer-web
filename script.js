@@ -23,7 +23,7 @@ function generate() {
             clearTimeout(timer);
             worker.terminate();
             if (event.data.error) { fail('エラー: ' + event.data.error); return; }
-            output.textContent = event.data.results.map((text, i) => `候補 ${i + 1}: ${text}`).join('\n');
+            output.textContent = event.data.results.map((text, i) => `候補 ${i + 1}: ${JSON.stringify(text)}`).join('\n');
         };
         worker.onerror = () => fail('生成処理を読み込めませんでした。HTTPサーバーで開いているか確認してください。');
         timer = setTimeout(() => fail('処理に時間がかかりすぎました。短い正規表現で試してください。'), 1500);
